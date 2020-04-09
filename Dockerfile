@@ -1,5 +1,5 @@
-#FROM mariadb:latest
-FROM healthcheck/mariadb
+FROM mariadb:latest
+#FROM healthcheck/mariadb
 
 LABEL maintainer="Ferimer, Servicios informáticos"
 
