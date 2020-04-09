@@ -1,0 +1,12 @@
+FROM mariadb:latest
+
+LABEL maintainer="Ferimer, Servicios informáticos"
+
+RUN apt update && \
+    apt install -y galera-arbitrator-4 && \
+    apt autoclean
+
+COPY configs/galera-arbitrator.cnf /etc/garbd/
+
+EXPOSE 4444 4567 4568
+ENTRYPOINT [ "garbd", "--cfg", "/etc/garbd/galera-arbitrator.cnf" ]
