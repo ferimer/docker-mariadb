@@ -12,8 +12,8 @@ rm -rf /backups/databases/$LAST*
 
 mkdir -p $DESTINO
 
-for bd in `mysql -u backup -B -N -e "show databases"`; do
-        mysqldump -u backup --events --triggers -R --databases $bd > $DESTINO/$bd.sql 2> /dev/null
+for bd in `mariadb -u backup -B -N -e "show databases"`; do
+        mariadb-dump -u backup --events --triggers -R --databases $bd > $DESTINO/$bd.sql 2> /dev/null
         gzip $DESTINO/$bd.sql
 done;
 
