@@ -1,4 +1,4 @@
-FROM mariadb:11.5.2
+FROM mariadb:11.6.2
 #FROM healthcheck/mariadb
 
 LABEL maintainer="Ferimer, Servicios informáticos"
