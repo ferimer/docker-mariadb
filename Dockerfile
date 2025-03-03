@@ -1,4 +1,6 @@
-FROM mariadb:11.7.2
+ARG MARIADB_VERSION="11.7.2"
+
+FROM mariadb:${MARIADB_VERSION}
 #FROM healthcheck/mariadb
 
 LABEL maintainer="Ferimer, Servicios informáticos"
