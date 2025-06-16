@@ -1,6 +1,6 @@
 DOCKER_NAME=ferimer/mariadb
 DOCKER_VERSION=11.8.2
-DOCKER_VERSIONLTS=11.4.5
+DOCKER_VERSIONLTS=11.8.2
 
 viewVersions:
 	curl https://downloads.mariadb.org/rest-api/mariadb/ | jq
