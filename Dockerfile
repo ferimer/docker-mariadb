@@ -1,4 +1,4 @@
-ARG MARIADB_VERSION="11.8.2"
+ARG MARIADB_VERSION="12.0.2"
 
 FROM mariadb:${MARIADB_VERSION}
 #FROM healthcheck/mariadb
